@@ -1,8 +1,8 @@
 import express from 'express'
 const products = express.Router();
-import { authenticateApiKey } from '../../middleware/utils/apiKey.utils';
-import { authenticateToken } from '../../middleware/utils/authToken.utils';
-import Products from '../../model/Products';
+import { authenticateApiKey } from '../../middleware/utils/apiKey.utils.js';
+import { authenticateToken } from '../../middleware/utils/authToken.utils.js';
+import Products from '../../model/Products.js';
 
 products.route("/products").get(authenticateApiKey, authenticateToken, async(req, res) => {
     try {

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const purchaseOrderSchema = new mongoose.Schema({
     name: {
@@ -97,4 +97,4 @@ const purchaseOrderSchema = new mongoose.Schema({
 
 const PurchaseOrder = mongoose.model('PurchaseOrder', purchaseOrderSchema);
 
-module.exports = PurchaseOrder;
+export default PurchaseOrder

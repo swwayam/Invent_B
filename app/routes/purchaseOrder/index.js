@@ -1,10 +1,10 @@
 import express from 'express'
 const purchaseOrder = express.Router();
-import { authenticateApiKey } from '../../middleware/utils/apiKey.utils';
-import { authenticateToken } from '../../middleware/utils/authToken.utils';
-import Products from '../../model/Products';
+import { authenticateApiKey } from '../../middleware/utils/apiKey.utils.js';
+import { authenticateToken } from '../../middleware/utils/authToken.utils.js';
+import Products from '../../model/Products.js';
 import mongoose from 'mongoose';
-import PurchaseOrder from '../../model/PurchaseOrder';
+import PurchaseOrder from '../../model/PurchaseOrder.js';
 
 purchaseOrder.route("/purchase-order").get(authenticateApiKey, authenticateToken, async(req, res) => {
     try {

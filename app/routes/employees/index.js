@@ -1,8 +1,8 @@
 import express from 'express'
 import bcrypt from 'bcrypt';
-import { authenticateApiKey } from '../../middleware/utils/apiKey.utils';
-import { authenticateToken } from '../../middleware/utils/authToken.utils';
-import Users from '../../model/Users';
+import { authenticateApiKey } from '../../middleware/utils/apiKey.utils.js';
+import { authenticateToken } from '../../middleware/utils/authToken.utils.js';
+import Users from '../../model/Users.js';
 const employees = express.Router();
 
 employees.post("/employees", authenticateApiKey, authenticateToken, async (req, res) => {

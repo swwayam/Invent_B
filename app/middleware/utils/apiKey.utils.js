@@ -1,12 +1,16 @@
-const crypto = require('crypto');
-const fs = require('fs');
-const path = require('path');
-const dotenv = require('dotenv');
+import crypto from 'crypto';
+import fs from 'fs';
+import path from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 dotenv.config();
 
 export const generateApiKey = () => {
     return crypto.randomBytes(32).toString('hex');
 };
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const envFilePath = path.resolve(__dirname, '../../../.env');
 

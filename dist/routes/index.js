@@ -10,10 +10,10 @@ import products from "./products/index.js";
 import employees from "./employees/index.js";
 import suppliers from "./suppliers/index.js";
 import purchaseOrder from "./purchaseOrder/index.js";
-
-const router = express.Router();
-
-router.route("/").get((req, res) => res.status(200).send("Welcome to the api project"));
+var router = express.Router();
+router.route("/").get(function (req, res) {
+  return res.status(200).send("Welcome to the api project");
+});
 router.use(generateKey);
 router.use(protectedR);
 router.use(login);
@@ -22,5 +22,4 @@ router.use(products);
 router.use(employees);
 router.use(suppliers);
 router.use(purchaseOrder);
-
-export default router
+export default router;

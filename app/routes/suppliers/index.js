@@ -1,10 +1,10 @@
 import express from 'express'
 const suppliers = express.Router();
-import { authenticateApiKey } from '../../middleware/utils/apiKey.utils';
-import { authenticateToken } from '../../middleware/utils/authToken.utils';
-import Suppliers from '../../model/Suppliers';
-import SupplierProducts from '../../model/SupplierProduct';
-import Products from '../../model/Products';
+import { authenticateApiKey } from '../../middleware/utils/apiKey.utils.js';
+import { authenticateToken } from '../../middleware/utils/authToken.utils.js';
+import Suppliers from '../../model/Suppliers.js';
+import SupplierProducts from '../../model/SupplierProduct.js';
+import Products from '../../model/Products.js';
 import mongoose from 'mongoose';
 
 suppliers.route("/suppliers").get(authenticateApiKey, authenticateToken, async(req, res) => {

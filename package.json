@@ -2,11 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "backend server",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel index.js -d dist",
-    "start": "npm run build && nodemon dist/index.js",
+    "build": "babel server app -d dist",
+    "start": "npm run build && node dist/index.js",
     "dev": "nodemon --exec babel-node server/index.js"
   },
   "author": "Ekakash Kumar",

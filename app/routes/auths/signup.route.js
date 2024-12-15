@@ -1,7 +1,7 @@
 import express from 'express'
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
-import Users from '../../model/Users';
+import Users from '../../model/Users.js';
 
 dotenv.config();
 

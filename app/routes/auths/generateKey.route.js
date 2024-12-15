@@ -1,5 +1,5 @@
 import express from 'express';
-import { generateApiKey, storeApiKeyInEnv } from '../../middleware/utils/apiKey.utils';
+import { generateApiKey, storeApiKeyInEnv } from '../../middleware/utils/apiKey.utils.js';
 
 const generateKey = express.Router();
 
