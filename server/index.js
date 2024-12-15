@@ -12,8 +12,7 @@ const port = process.env.PORT
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit:'500mb'}));
 app.use(cors({
-    credentials: true,
-    origin: 'https://invent-f.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
 }));
