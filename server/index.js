@@ -7,8 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express()
-const port = process.env.APP_PORT
-const app_url = process.env.APP_URL + process.env.APP_PORT
+const port = process.env.PORT
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit:'500mb'}));
