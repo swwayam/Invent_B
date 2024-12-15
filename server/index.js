@@ -36,5 +36,4 @@ app.route("/").get((req, res) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
-  console.log(`App started on ${app_url}`)
 })
