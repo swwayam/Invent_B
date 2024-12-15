@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Simulate a database or in-memory store for storing API keys
-const apiKeysStore = new Set(); // Replace with an actual database in production
+export const apiKeysStore = new Set(); // Replace with an actual database in production
 
 // Generate a simple API Key
 export const generateApiKey = () => {
